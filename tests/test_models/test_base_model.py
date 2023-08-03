@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """We will create a test of the BaseModel class"""
 
+
 import datetime
 import unittest
 from models.base_model import BaseModel
@@ -35,6 +36,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertTrue('id' in obj_dict)
         self.assertTrue('created_at' in obj_dict)
         self.assertTrue('updated_at' in obj_dict)
+        self.assertNotEqual(obj_dict, obj.__dict__)
 
 
 if __name__ == '__main__':
