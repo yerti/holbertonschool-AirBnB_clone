@@ -1,17 +1,27 @@
 #!/usr/bin/python3
 """Contains class BaseModel """
 
-
-import uuid
-import datetime
+from datetime import datetime
+from uuid import uuid4
+import storage
 
 
 class BaseModel:
-    def __init__(self):
-        """We declare the public attributes"""
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.datetime.now()
-        self.updated_at = self.created_at
+    def __init__(self, *args, **kwargs):
+        """contructor"""
+        if kwargs != {}:
+            for kwargs, vars in kwargs.items():
+                if kwargs != "__class__":
+                    setattr(self, kwargs, vars)
+                if kwargs == "updated_at":
+                    self.updated_at = datetime.strptime(vars, "%Y-%m-%dT%H:%M:%S.%f")
+                if kwargs == "created_at":
+                    self.created_at = datetime.strptime(vars, "%Y-%m-%dT%H:%M:%S.%f")
+                else:
+                    storage.new(self)
+                    self.id = str(uuid.uuid4())
+                    self.created_at = datetime.datetime.now()
+                    self.updated_at = self.created_at
 
     def __str__(self):
         """Returns us in chain"""
