@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""
+The starting point for the command interpreter
+"""
 import cmd
-
 
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand class that implements a command line interface"""
