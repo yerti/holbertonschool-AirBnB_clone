@@ -3,9 +3,9 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
-    """text"""
+    """HBNBCommand class that implements a command line interface"""
     def emptyline(self):
-        """text"""
+        """This will give a blank line"""
         pass
 
     completekey = None
@@ -23,10 +23,12 @@ class HBNBCommand(cmd.Cmd):
         print("\n")
 
     def do_quit(self, line):
+        """Command to exit the program"""
         print("Quit command to exit the program")
         return True
 
     def do_EOF(self, line):
+        """Command to handle the end of the file (Ctrl+D)"""
         return True
 
 
