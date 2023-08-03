@@ -20,6 +20,13 @@ class TestBaseModel(unittest.TestCase):
         self.assertTrue(hasattr(obj, 'created_at'))
         self.assertTrue(hasattr(obj, 'updated_at'))
 
+    """Tests eachs __str__"""
+    def test_str(self):
+        obj = BaseModel()
+        obj_str = str(obj)
+        out_str = "[BaseModel] ({}) {}".format(obj.id, obj.__dict__)
+        self.assertEqual(obj_str, out_str)
+
     """check if it updates correctly after calling the save method"""
     def test_save(self):
         obj = BaseModel()
