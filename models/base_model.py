@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Contains class BaseModel """
+"""
+create new class
+"""
 
 import models
 from datetime import datetime
@@ -11,13 +13,13 @@ class BaseModel:
         """constructor"""
         if kwargs:
             for key, value in kwargs.items():
-                print_time = '%Y-%m-%dT%H:%M:%S.%f'
-                if key == "updated_at":
-                    self.updated_at = datetime.strptime(value, print_time)
-                elif key == "created_at":
-                    self.created_at = datetime.strptime(value, print_time)
-                else:
+                if key != "__class__":
                     setattr(self, key, value)
+                if key == "updated_at":
+                    self.updated_at = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f')
+                elif key == "created_at":
+                    self.created_at = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f')
+
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
