@@ -117,4 +117,5 @@ class HBNBCommand(cmd.Cmd):
     
 
 if __name__ == '__main__':
-    HBNBCommand().cmdloop()
+    import io
+    HBNBCommand(stdout=io.StringIO(), stdin=io.StringIO()).cmdloop()
