@@ -30,9 +30,11 @@ class TestBaseModel(unittest.TestCase):
     """check if it updates correctly after calling the save method"""
     def test_save(self):
         obj = BaseModel()
-        prev_updated_at = obj.updated_at
+        obj_updated_at1 = obj.updated_at
         obj.save()
-        self.assertNotEqual(prev_updated_at, obj.updated_at)
+
+        obj_updated_at2 = obj.updated_at
+        self.assertNotEqual(obj_updated_at1, obj_updated_at2)
 
     """check if the dictionary is created with the attributes"""
     def test_to_dict(self):
