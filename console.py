@@ -1,27 +1,28 @@
 #!/usr/bin/python3
-"""Entry point for the command interpreter"""
+"""The starting point for the command interpreter"""
 import cmd
 import json
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
+from models.user import User
 class HBNBCommand(cmd.Cmd):
-    """Interpreter class from cmd"""
+    """HBNBCommand class that implements a command line interface"""
     prompt = '(hbnb) '
-    classes_list = ["BaseModel"]
+    classes_list = ["BaseModel", "User"]
     int_attrs = ["attribute1", "attribute2"]
     float_attrs = ["attribute3", "attribute4"]
     def do_EOF(self, line):
-        """Quits the console when Ctrl D entered"""
+        """Quits the console when (Ctrl+D) entered"""
         print()
         return True
     def do_quit(self, line):
-        """Quit command to exit the program"""
+        """Command to exit the program"""
         return True
     def emptyline(self):
-        """Overrides parent empty line method"""
+        """This will give a blank line"""
         pass
     def do_help(self, line):
-        """Display help information for commands"""
+        """Show help information for commands"""
         print("\n")
         print("Documented commands (type help <topic>):")
         print("========================================")
@@ -29,8 +30,7 @@ class HBNBCommand(cmd.Cmd):
         print("\n")
 
     def do_create(self, line):
-        """Creates a new instance of a specified class and prints
-        nstance's unique id"""
+        """Instance creator for test classes"""
         if not line:
             print("** class name missing **")
             return
@@ -42,8 +42,7 @@ class HBNBCommand(cmd.Cmd):
         new_obj.save()
         print(new_obj.id)
     def do_show(self, line):
-        """Prints the string repr of an instance based
-        on class name and id"""
+        """Shows information about an instance"""
         if not line:
             print("** class name missing **")
             return
@@ -63,7 +62,7 @@ class HBNBCommand(cmd.Cmd):
                 return
         print("** no instance found **")
     def do_destroy(self, line):
-        """Deletes an instance of a class based on class name and id"""
+        """Destroy an instance"""
         if not line:
             print("** class name missing **")
             return
@@ -87,8 +86,7 @@ class HBNBCommand(cmd.Cmd):
                 return
         print("** no instance found **")
     def do_all(self, line):
-        """Prints, as a list of strings, or all instances of a certain
-        class, if provided"""
+        """Prints all string representations of all instances"""
         objs_list = []
         storage = FileStorage()
         all_objs = storage.all()
@@ -110,9 +108,7 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print("** class doesn't exist **")
     def do_update(self, line):
-        """Updates or adds an attribute to an instance of a class
-        instance is identified by class name and id
-        only one attribute and value can be updated per call"""
+        """Update an instance based on the class name and ID"""
         if not line:
             print("** class name missing **")
             return
