@@ -1,7 +1,7 @@
 # CLONE AIRBNB!
 ![logo de mi proyecto](Images/airbnb.jpg)
 
-## Description of the project:
+## Description of the project:speech_balloon:
 
 This project is a clone of the main "AirBnB" page,
 where the purpose is to have the same functionality of the authentic page,
@@ -15,7 +15,7 @@ of places, safe, comfortable and accessible lodgings for your reach.
    - [Examples](#examples)
 - [The Authors](#the-authors)
 
-## The command interpreter:
+## The console:computer:
 
 The command interpreter is also known as shell or terminal
 where it allows us to interact with the operating system by
