@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""
+The starting point for the command interpreter
+"""
+
 import cmd
 import json
 
-"""The starting point for the command interpreter"""
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand class that implements a command line interface"""
     def emptyline(self):
@@ -16,11 +19,11 @@ class HBNBCommand(cmd.Cmd):
         super().__init__()
 
     def do_help(self, line):
-        """"Show help information for commands"""
+        """Show help information for commands"""
         print("\n")
         print("Documented commands (type help <topic>):")
         print("========================================")
-        print("EOF  help  quit  create")
+        print("EOF  help  quit  creatie  show  destroy  all  update")
         print("\n")
 
     def do_quit(self, line):
