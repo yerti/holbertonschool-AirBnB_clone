@@ -47,7 +47,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
     
     def do_show(self, line):
-        """Muestra información de una instancia"""
+        """Shows information about an instance"""
         if not line:
             print("** class name missing **")
         else:
