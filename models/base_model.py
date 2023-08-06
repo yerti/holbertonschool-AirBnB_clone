@@ -11,14 +11,15 @@ from uuid import uuid4
 class BaseModel:
     def __init__(self, *args, **kwargs):
         """constructor"""
+        date_time = '%Y-%m-%dT%H:%M:%S.%f'
         if kwargs:
             for key, value in kwargs.items():
                 if key != "__class__":
                     setattr(self, key, value)
                 if key == "updated_at":
-                    self.updated_at = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f')
+                    self.updated_at = datetime.strptime(value, date_time)
                 elif key == "created_at":
-                    self.created_at = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f')
+                    self.created_at = datetime.strptime(value, date_time)
 
         else:
             self.id = str(uuid4())
