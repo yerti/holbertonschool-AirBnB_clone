@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 
 class HBNBCommand(cmd.Cmd):
     
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
     
     def emptyline(self):
         """This will give a blank line"""
