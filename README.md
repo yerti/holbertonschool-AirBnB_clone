@@ -12,7 +12,7 @@ of places, safe, comfortable and accessible lodgings for your reach.
 |  install python on linux URL: [Add install python on linux here] | (https://www.python.org/downloads/source/) |
 | -------  | ----------- |
 | install python on windows URL: [Add install python on windows URL here] | (https://www.python.org/downloads/) |
-| install python on MacOS URL: [Add install python on MacOSh here] | (https://www.python.org/downloads/macos/) |
+| install python on MacOS URL: [Add install python on MacOS here] | (https://www.python.org/downloads/macos/) |
 
 ## The Console:computer:
 The console has the use of an interface so that the user can interact with the program. In order to use it, the first step would be to clone our repository and you must have the python language installed in version 3.8, which if you still do not have the links depending on your operating system which you use:
