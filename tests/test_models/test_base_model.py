@@ -28,10 +28,11 @@ class TestBaseModel(unittest.TestCase):
     """check if it updates correctly after calling the save method"""
     def test_save(self):
         base1 = BaseModel()
+        initial_updated_at = base1.updated_at
         sleep(2)
-        update = base1.updated_at
         base1.save()
-        self.assertNotEqual(update, base1.updated_at)
+        updated_updated_at = base1.updated_at
+        self.assertNotEqual(initial_updated_at, updated_updated_at)
 
     """check if the dictionary is created with the attributes"""
     def test_to_dict(self):
