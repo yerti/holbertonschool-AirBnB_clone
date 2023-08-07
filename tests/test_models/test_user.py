@@ -2,10 +2,10 @@
 
 
 import unittest
-from models.base_model import BaseModel
+from models.user import User
 
 
-class testUser(unittest.TestCase):
+class TestUser(unittest.TestCase):
 
     def test_attributes(self):
         user = User()
