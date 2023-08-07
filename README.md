@@ -9,9 +9,7 @@ which you can do accommodation searches or see reviews
 of places, safe, comfortable and accessible lodgings for your reach.
 
 ## The Console:computer:
-The console has the use of an interface so that the user can interact with the program.
-which they have to clone it so they can use it
-In order to use our console, you must have the python language installed according to your operating system:
+The console has the use of an interface so that the user can interact with the program. In order to use it, the first step would be to clone our repository and you must have the python language installed in version 3.8, which if you still do not have the links depending on your operating system which you use:
 
 ###links
 
