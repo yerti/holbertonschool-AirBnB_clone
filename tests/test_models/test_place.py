@@ -14,13 +14,13 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(place.user_id, "")
         self.assertEqual(place.name, "")
         self.assertEqual(place.description, "")
-        self.assertEqual(place.number_rooms, "")
-        self.assertEqual(place.number_bathrooms, "")
-        self.assertEqual(place.max_guest, "")
-        self.assertEqual(place.price_by_night, "")
-        self.assertEqual(place.latitude, "")
-        self.assertEqual(place.longitude, "")
-        self.assertEqual(place.amenity_ids, "")
+        self.assertEqual(place.number_rooms, 0)
+        self.assertEqual(place.number_bathrooms, 0)
+        self.assertEqual(place.max_guest, 0)
+        self.assertEqual(place.price_by_night, 0)
+        self.assertEqual(place.latitude, 0.0)
+        self.assertEqual(place.longitude, 0.0)
+        self.assertEqual(place.amenity_ids, [])
 
 
 if __name__ == '__main__':
