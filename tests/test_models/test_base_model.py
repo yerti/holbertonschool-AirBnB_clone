@@ -32,6 +32,7 @@ class TestBaseModel(unittest.TestCase):
 
         self.obj.save()
         obj_updated2 = self.obj.updated_at
+        sleep(4)
 
         self.assertNotEqual(obj_updated1, obj_updated2)
 
