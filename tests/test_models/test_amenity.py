@@ -10,7 +10,7 @@ class TestAmenity(unittest.TestCase):
     def test_attributes(self):
         amenity =  Amenity()
 
-        self.assertTrue(hasattr(amenity, 'name'))
+        self.assertEqual(amenity.name, "")
 
 
 if __name__ == '__main__':
