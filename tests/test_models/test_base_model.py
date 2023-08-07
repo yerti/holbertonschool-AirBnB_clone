@@ -5,7 +5,7 @@
 import unittest
 from datetime import datetime
 from models.base_model import BaseModel
-
+from time import sleep
 
 class TestBaseModel(unittest.TestCase):
 
@@ -28,6 +28,7 @@ class TestBaseModel(unittest.TestCase):
     """check if it updates correctly after calling the save method"""
     def test_save(self):
         obj_updated1 = self.obj.updated_at
+        sleep(2)
 
         self.obj.save()
         obj_updated2 = self.obj.updated_at
