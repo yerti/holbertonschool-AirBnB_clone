@@ -5,22 +5,34 @@ import json
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models.user import User
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.amenity import Amenity
+from models.state import State
+
+
 class HBNBCommand(cmd.Cmd):
     """HBNBCommand class that implements a command line interface"""
     prompt = '(hbnb) '
-    classes_list = ["BaseModel", "User"]
+    classes_list = ["BaseModel", "User", "State", "City",
+                    "Amenity", "Place", "Review"]
     int_attrs = ["attribute1", "attribute2"]
     float_attrs = ["attribute3", "attribute4"]
+
     def do_EOF(self, line):
         """Quits the console when (Ctrl+D) entered"""
         print()
         return True
+
     def do_quit(self, line):
         """Command to exit the program"""
         return True
+
     def emptyline(self):
         """This will give a blank line"""
         pass
+
     def do_help(self, line):
         """Show help information for commands"""
         print("\n")
@@ -41,6 +53,7 @@ class HBNBCommand(cmd.Cmd):
         new_obj = globals()[args[0]]()
         new_obj.save()
         print(new_obj.id)
+
     def do_show(self, line):
         """Shows information about an instance"""
         if not line:
@@ -61,6 +74,7 @@ class HBNBCommand(cmd.Cmd):
                 print(value)
                 return
         print("** no instance found **")
+
     def do_destroy(self, line):
         """Destroy an instance"""
         if not line:
@@ -85,6 +99,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
                 return
         print("** no instance found **")
+
     def do_all(self, line):
         """Prints all string representations of all instances"""
         objs_list = []
@@ -107,6 +122,7 @@ class HBNBCommand(cmd.Cmd):
                     print(objs_list)
                 else:
                     print("** class doesn't exist **")
+
     def do_update(self, line):
         """Update an instance based on the class name and ID"""
         if not line:
@@ -142,5 +158,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             setattr(instance_found, args[2], args[3])
         instance_found.save()
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
