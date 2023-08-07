@@ -49,5 +49,5 @@ python3 -m unittest discover tests
 ```
 
 ## The Authors:eyeglasses::mortar_board:
-- **Yerti Mariela Mosqueira Briceño**
-- **Denzel Andres Romero Bautista**
+- **Yerti Mariela Mosqueira Briceño** <yerti0818@gmail.com>
+- **Denzel Andres Romero Bautista** <74129875rb@gmail.com>
