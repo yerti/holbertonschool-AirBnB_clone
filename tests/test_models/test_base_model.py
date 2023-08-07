@@ -25,14 +25,12 @@ class TestBaseModel(unittest.TestCase):
         out_str = "[BaseModel] ({}) {}".format(self.obj.id, self.obj.__dict__)
         self.assertEqual(obj_str, out_str)
 
-    """check if it updates correctly after calling the save method"""
     def test_save(self):
+        """check if it updates correctly after calling the save method"""
         base1 = BaseModel()
-        initial_updated_at = base1.updated_at
-        sleep(2)
+        update = base1.updated_at
         base1.save()
-        updated_updated_at = base1.updated_at
-        self.assertNotEqual(initial_updated_at, updated_updated_at)
+        self.assertNotEqual(update, base1.updated_at)
 
     """check if the dictionary is created with the attributes"""
     def test_to_dict(self):
