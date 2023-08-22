@@ -1,0 +1,82 @@
+/* Styles for the places class */
+.places {
+    display: flex;
+    margin: 15px auto;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Styles for the h1 type title that is inside the places class */
+.places h1 {
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 30px;
+}
+
+/* information card styles */
+.places article {
+    width: 390px;
+    margin: 20px;
+    padding: 10px 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+}
+
+/* Styles for h2 type subtitle */
+article h2 {
+    font-size: 30px;
+    padding: 0;
+    margin: 10px auto;
+}
+
+/* Styles for price class */
+.places .price_by_night {
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 4px solid #FF5A5F;
+    color: #FF5A5F;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 315px;
+    margin-top: -55px;
+}
+
+/* Styles for the information section about the places for rent */
+.places .information {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    margin-top: 40px;
+    padding: 10px 0;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+/* Styles for the width of the child classes of the information class */
+.information .max_guest,
+.information .number_rooms,
+.information .number_bathrooms {
+    width: 100px;
+}
+
+/* Styles for user section */
+.places .user {
+    display: flex;
+    text-align: initial;
+    margin-top: 10px;
+}
+
+/* Styles for the place description section */
+.places .description {
+    text-align: initial;
+    margin-top: -25px;
+}
