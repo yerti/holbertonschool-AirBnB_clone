@@ -1,0 +1,64 @@
+/* Styles for the filters class which is a child of container */
+.container .filters {
+    background-color: white;
+    height: 25%; 
+    width: 100%; 
+    border: 1px solid #DDDDDD; 
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: opacity 0.3s;
+}
+
+/* Styles for the button tag that is a child of the filters class */
+.filters button {
+    font-size: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: none;
+    border-radius: 4px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+/* Styles for the button label to give it an opacity when hovering over the button */
+.filters  button:hover {
+    opacity: 0.9;
+}
+
+/* Styles for the location class */
+.locations {
+    border-right: 1px solid #DDDDDD;
+}
+
+/* Styles for the location class */
+.amenities {
+    margin-right: 270px;
+}
+
+/* Styles for amenetis and location classes that have the same declarations */ 
+.locations,
+.amenities {
+    height: 100%;
+    width: 25%;
+}
+
+/* Styles for the h3 title that is a child of the classes and has the same declarations */
+.locations h3,
+.amenities h3 {
+    font-weight: 600;
+    margin-left: 40px;
+
+}
+
+/* Styles for the h4 title that is a child of the classes and has the same declarations */
+.locations h4,
+.amenities h4 {
+    margin-top: -10px;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 40px;
+}
