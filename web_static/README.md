@@ -39,7 +39,7 @@ Contains the part of the console logo.
 
 In the main section it contains all the information about the rental places and what benefits it has, it has a section where you can find the drop-down menus and the search button, after that section you find the information cards about the search places where the cards have all the detailed information about the place.
 
-![section-main](./images/section-main-menus.jpeg)
+![section-main](./images/section-main.jpeg)
 
 pull-down menus:
 
