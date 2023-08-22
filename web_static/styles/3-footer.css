@@ -1,0 +1,10 @@
+/* Styles for the footer section */
+footer {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
